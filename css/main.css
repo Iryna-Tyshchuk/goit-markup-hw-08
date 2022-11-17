@@ -836,6 +836,7 @@ body {
 
 .our-clients-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   align-items: center;
   justify-content: center;
@@ -843,11 +844,30 @@ body {
   margin: 0;
 }
 
+.our-clients-item {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .our-clients-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .our-clients-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-clients-item {
+    width: calc((100% - 150px) / 6);
+    flex-wrap: nowrap;
+  }
+}
+
 .our-clients-link {
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  width: 170px;
   height: 92px;
   display: flex;
   align-items: center;
