@@ -38,6 +38,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 body {
@@ -62,8 +63,14 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {
@@ -90,10 +97,26 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 448px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .logo {
@@ -128,12 +151,18 @@ body {
 
 .section-title {
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .backdrop {
@@ -441,9 +470,14 @@ body {
 }
 
 .hero {
-  padding: 200px 0px;
+  padding: 118px 0;
   background-color: #2f303a;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 200px 0px;
+  }
 }
 
 .hero-title {
@@ -451,12 +485,19 @@ body {
   margin-bottom: 30px;
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  max-width: 696px;
+  max-width: 360px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 
 .button-hero {
@@ -476,7 +517,6 @@ body {
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid black;
@@ -485,11 +525,31 @@ body {
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 1200px) {
+  .overlay {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .feature-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  line-height: 1.71;
+}
+
+.feature-list__item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .feature-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .feature-list__title {
@@ -499,7 +559,13 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .feature-list__title {
+    text-align: left;
+  }
 }
 
 .feature-list__text {
@@ -507,20 +573,28 @@ body {
   margin-bottom: 0px;
 }
 
-.features-list__wrap {
-  width: 270px;
-}
-
 .feature-list__svg {
   margin-bottom: 30px;
   padding: 25px 100px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: var(--background-grey-color);
 }
 
-.our-works {
-  padding-top: 0;
+@media screen and (max-width: 1199px) {
+  .our-works {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .our-works__list {
@@ -552,23 +626,37 @@ body {
   background-color: var(--background-grey-color);
 }
 
+.our-team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+}
+
 .our-team-box {
+  width: 100%;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.our-team-list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .our-team-box {
+    width: calc((100% - 30px) / 2);
+  }
 }
-
-.our-team-list .item + .item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .our-team-box {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .our-team-description {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 10px 24px;
+}
+@media screen and (min-width: 1200px) {
+  .our-team-description {
+    padding-bottom: 30px;
+  }
 }
 
 .our-team .title {
