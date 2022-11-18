@@ -124,9 +124,15 @@ body {
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logoblue {
@@ -410,6 +416,16 @@ body {
   border-bottom-style: solid;
   border-bottom-color: #ececec;
 }
+@media screen and (min-width: 768px) {
+  .header > .container {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header > .container {
+    margin: 0 auto;
+  }
+}
 
 .main-nav {
   display: flex;
@@ -423,6 +439,11 @@ body {
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav {
     margin-left: 93px;
   }
 }
@@ -447,25 +468,36 @@ body {
 }
 @media screen and (min-width: 768px) {
   .contacts {
-    display: flex;
-    margin-left: auto;
+    display: block;
     color: var(--primary-text-color);
     font-weight: 500;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     align-items: baseline;
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+    font-size: 14px;
   }
 }
 
 .contacts .link {
   display: block;
   margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
-
-.contacts .item + .item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contacts .link .contacts .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .current {
@@ -484,8 +516,13 @@ body {
 
 .icon {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .icon {
+    margin-right: 10px;
+  }
 }
 .icon:hover, .icon:focus {
   fill: currentColor;
@@ -499,6 +536,11 @@ body {
 }
 .menu-open > svg {
   fill: #000;
+}
+@media screen and (min-width: 768px) {
+  .menu-open {
+    display: none;
+  }
 }
 
 .mob-menu {

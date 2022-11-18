@@ -2,6 +2,14 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ececec;
+  > .container {
+    @include tablet {
+      margin: 0;
+    }
+    @include desktop {
+      margin: 0 auto;
+    }
+  }
 }
 
 .main-nav {
@@ -14,6 +22,9 @@
   display: none;
   @include tablet {
     display: flex;
+    margin-left: 87px;
+  }
+  @include desktop {
     margin-left: 93px;
   }
 }
@@ -38,23 +49,33 @@
 .contacts {
   display: none;
   @include tablet {
-    display: flex;
-    margin-left: auto;
+    display: block;
     color: var(--primary-text-color);
     font-weight: 500;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     align-items: baseline;
+    margin-left: 30px;
+  }
+  @include desktop {
+    display: flex;
+    margin-left: auto;
+    font-size: 14px;
   }
 }
+
 .contacts .link {
   display: block;
   margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.contacts .item + .item {
-  margin-left: 50px;
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    .contacts .item + .item {
+      margin-left: 50px;
+    }
+  }
 }
 
 .current {
@@ -73,7 +94,10 @@
 
 .icon {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+  @include desktop {
+    margin-right: 10px;
+  }
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -81,12 +105,16 @@
     color: var(--accent-color);
   }
 }
+
 .menu-open {
   background-color: transparent;
   border: none;
   margin-left: auto;
   > svg {
     fill: #000;
+  }
+  @include tablet {
+    display: none;
   }
 }
 
