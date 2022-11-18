@@ -8,8 +8,8 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: var(--primary-white-color);
 
   padding: 40px;
@@ -22,6 +22,10 @@
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1) rotate(0);
   transition: transform 300ms linear;
+  @include tablet {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -141,11 +145,16 @@
 }
 
 .check-text {
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.66px;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .check-text span {
