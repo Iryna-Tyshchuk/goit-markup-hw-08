@@ -905,6 +905,15 @@ body {
   padding-bottom: 60px;
 }
 
+.footer-address {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    text-align: left;
+  }
+}
+
 .address {
   margin-top: 20px;
   font-style: normal;
@@ -929,7 +938,11 @@ body {
 .footer-socials {
   width: 206px;
   height: 80px;
-  margin-left: 70px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-socials {
+    margin-left: 70px;
+  }
 }
 
 .footer-socisls-title {
@@ -939,7 +952,13 @@ body {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--primary-white-color);
+}
+@media screen and (min-width: 1200px) {
+  .footer-socisls-title {
+    text-align: left;
+  }
 }
 
 .footer-icon-list {
@@ -974,28 +993,49 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer > .container {
+.footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+  }
 }
 
 .footer-singup {
-  margin-left: 93px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0;
+}
+@media screen and (min-width: 1200px) {
+  .footer-singup {
+    margin-left: 93px;
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
-/* .singup-form {
-  box-sizing: content-box;
-  display: flex;
-  align-items: baseline;
-} */
 .singup-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--primary-white-color);
-  padding-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .singup-text {
+    padding-bottom: 20px;
+    text-align: left;
+  }
 }
 
 .singup-btn {
@@ -1009,15 +1049,20 @@ body {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-left: 12px;
   display: inline-flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .singup-btn {
+    margin-left: 12px;
+  }
+}
 
 .singup-input {
-  width: 358px;
+  width: 100%;
+  min-width: 290px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1025,8 +1070,13 @@ body {
   background-color: transparent;
   font-size: 14px;
   color: #000000;
-  padding: 15px;
-  padding-left: 16px;
+}
+@media screen and (min-width: 1200px) {
+  .singup-input {
+    width: 358px;
+    padding: 15px;
+    padding-left: 16px;
+  }
 }
 
 .our-clients-list {
