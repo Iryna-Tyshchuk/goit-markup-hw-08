@@ -1042,7 +1042,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-singup {
     margin-left: 93px;
-    flex-direction: row;
+    align-items: baseline;
     gap: 0;
   }
 }
@@ -1087,7 +1087,11 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .singup-btn {
+    margin: 0;
+    align-self: flex-end;
     margin-left: 12px;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -1111,6 +1115,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .singup-input {
+    position: relative;
     width: 358px;
     padding: 15px;
     padding-left: 16px;

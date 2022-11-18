@@ -125,7 +125,8 @@
   }
   @include desktop {
     margin-left: 93px;
-    flex-direction: row;
+    align-items: baseline;
+
     gap: 0;
   }
 }
@@ -171,7 +172,11 @@
   }
 
   @include desktop {
+    margin: 0;
+    align-self: flex-end;
     margin-left: 12px;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -193,6 +198,7 @@
     width: 450px;
   }
   @include desktop {
+    position: relative;
     width: 358px;
     padding: 15px;
     padding-left: 16px;
