@@ -127,6 +127,7 @@
 }
 
 .singup-btn {
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -134,7 +135,7 @@
   letter-spacing: 0.06em;
 
   color: var(--primary-white-color);
-  min-width: 200px;
+  width: 200px;
   height: 50px;
 
   background: var(--accent-color);
@@ -145,6 +146,9 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    margin: 0 auto;
+  }
 
   @include desktop {
     margin-left: 12px;
@@ -163,8 +167,11 @@
   background-color: transparent;
   font-size: 14px;
   color: #000000;
-  // padding: 15px;
-  // padding-left: 16px;
+  padding: 15px;
+  padding-left: 16px;
+  @include mobile {
+    width: 450px;
+  }
   @include desktop {
     width: 358px;
     padding: 15px;
