@@ -136,9 +136,10 @@
   }
 }
 
-// .mob-list {
-//   margin-bottom: 32px;
-// }
+.mob-menu-top {
+  padding-top: 30px;
+  //??????
+}
 
 .mob-list__item:not(:last-child) {
   margin-bottom: 32px;
@@ -147,8 +148,11 @@
   background-color: transparent;
   border: none;
   margin-left: auto;
-  margin-right: 10px;
-  display: block;
+
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  position: absolute;
 }
 
 .mob-list__link {

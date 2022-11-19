@@ -62,6 +62,10 @@ body {
   color: var(--accent-color);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -562,6 +566,10 @@ body {
   overflow: auto;
 }
 
+.mob-menu-top {
+  padding-top: 30px;
+}
+
 .mob-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -570,8 +578,10 @@ body {
   background-color: transparent;
   border: none;
   margin-left: auto;
-  margin-right: 10px;
-  display: block;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  position: absolute;
 }
 
 .mob-list__link {
