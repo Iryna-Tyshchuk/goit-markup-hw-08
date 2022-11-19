@@ -436,6 +436,12 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .main-nav {
+    padding-top: 16px;
+    padding: 16px;
+  }
+}
 
 /* Site nav */
 .site-nav {

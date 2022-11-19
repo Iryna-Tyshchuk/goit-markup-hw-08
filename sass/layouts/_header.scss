@@ -15,10 +15,10 @@
 .main-nav {
   display: flex;
   align-items: center;
-  // @include mobile {
-  //   padding-top: 16px;
-  //   padding: 16px;
-  // }
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding: 16px;
+  }
 }
 
 /* Site nav */
