@@ -3,7 +3,7 @@
   padding: 118px 0;
   background-color: #2f303a;
   text-align: center;
-  @include tablet {
+  @include desktop {
     padding: 200px 0px;
   }
 }
