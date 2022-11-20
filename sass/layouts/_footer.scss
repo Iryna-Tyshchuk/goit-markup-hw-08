@@ -10,6 +10,7 @@
     margin-left: 50px;
   }
   @include desktop {
+    margin-left: 0;
     text-align: left;
   }
 }
@@ -119,7 +120,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin: 0;
-  @include tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     align-self: center;
     margin: 0 auto;
     margin-top: 60px;
@@ -127,12 +128,12 @@
   @include desktop {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: row;
     align-items: baseline;
+    align-items: flex-end;
+    gap: 10px;
 
-    gap: 0;
-    margin: 0;
-    margin-top: 0;
-    margin-left: 90px;
+    margin-left: 93px;
   }
 }
 
@@ -146,10 +147,12 @@
 
   color: var(--primary-white-color);
 
-  @include desktop {
-    padding-bottom: 20px;
-    text-align: left;
-  }
+  margin-bottom: 20px;
+
+  // @include desktop {
+  //   padding-bottom: 20px;
+  //   text-align: left;
+  // }
 }
 
 .singup-btn {
