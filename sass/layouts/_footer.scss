@@ -149,10 +149,9 @@
 
   margin-bottom: 20px;
 
-  // @include desktop {
-  //   padding-bottom: 20px;
-  //   text-align: left;
-  // }
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .singup-btn {
