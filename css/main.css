@@ -186,8 +186,7 @@ body {
 }
 
 .modal {
-  width: 450px;
-  height: 609px;
+  width: 90%;
   background-color: var(--primary-white-color);
   padding: 40px;
   border-radius: 4px;
@@ -197,6 +196,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1) rotate(0);
   transition: transform 300ms linear;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 @media screen and (min-width: 768px) {
   .modal {
@@ -358,16 +363,17 @@ body {
 
 .check-text {
   font-size: 12px;
-  line-height: 1.66px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .check-text {
     font-size: 14px;
+    line-height: 1.71;
   }
 }
 
